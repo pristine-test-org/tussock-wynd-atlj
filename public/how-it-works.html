@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How the list works · Tussock Wynd</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #2f7d4f; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: var(--accent); }
+      .mark { font-weight: 700; color: var(--accent); }
+      main { max-width: 44rem; margin: 0 auto; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem);
+        margin: 2rem 1rem 1rem;
+        background: linear-gradient(90deg, #2f7d4f, #7a3fb0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+      .lead { margin: 0; padding: 0; width: 100vw; max-width: none; font-size: 1.1rem; line-height: 1.5; }
+      .steps { margin: 2rem 1rem; padding-left: 1.2rem; line-height: 1.8; }
+      /* Intentional, for Impeccable's test drive: low-contrast text, light grey on the off-white background. */
+      .note { margin: 1rem; color: #c8c8c4; }
+      /* Intentional, for Impeccable's test drive: hard-coded colour outside the site's palette. */
+      .card { margin: 1rem; padding: 1rem; border-radius: 0.5rem; background: #ffe14d; width: 60%; transition: width 0.3s; }
+      /* Intentional, for Impeccable's test drive: layout property in a transition (see .card). */
+      .card:hover { width: 90%; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .back { font-size: 10px; margin: 1rem; display: inline-block; color: var(--accent); }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="mark">Tussock Wynd</span>
+      <a href="/">Home</a>
+    </header>
+    <main>
+      <h1>How the list works</h1>
+      <p class="lead">Every item on the Tussock Wynd list is stored in one shared table, so what you see on the landing page is always the latest five entries.</p>
+      <ol class="steps">
+        <li>Someone adds an item to the shared list.</li>
+        <li>The landing page asks for the five newest entries when it loads.</li>
+        <li>Finished items are shown with a tick in front of them.</li>
+      </ol>
+      <p class="note">The list refreshes each time the page is opened.</p>
+      <div class="card"><strong>5 items</strong> are shown at a time, newest first.</div>
+      <a class="back" href="/">Back to the landing page</a>
+    </main>
+    <footer>Tussock Wynd · a small product, explained in one page</footer>
+  </body>
+</html>
