@@ -1,7 +1,7 @@
 :root {
   font-family: system-ui, sans-serif;
   color: #1c1c1c;
-  background: #fafaf7;
+  background: #f0f4ef;
 }
 body { margin: 0; }
 header, main, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
